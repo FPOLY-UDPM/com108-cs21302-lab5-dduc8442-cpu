@@ -1,5 +1,5 @@
 /******************************************************************************
- * Họ và tên: [ĐIỀN TÊN TẠI ĐÂY]
+ * Họ và tên: [Đặng ĐÌnh Đức]
  * MSSV:      [ĐIỀN MSSV TẠI ĐÂY]
  * Lớp:       [ĐIỀN LỚP TẠI ĐÂY]
  *****************************************************************************/
@@ -12,12 +12,24 @@
 
 #include <stdio.h>
 
-//Tạo hàm 
+void hoanVi(int *a, int *b){
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
 
-int main() {
+int main(){
+    int a, b;
 
-    // //Gọi hàm trong hàm main 
-    
+    printf("Nhap a va b: ");
+    scanf("%d %d", &a, &b);
+
+    hoanVi(&a, &b);
+
+    printf("Sau khi hoan vi:\n");
+    printf("a = %d\n", a);
+    printf("b = %d\n", b);
+
     return 0;
 }
 
